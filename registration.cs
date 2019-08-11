@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class registration : MonoBehaviour
@@ -27,7 +28,7 @@ public class registration : MonoBehaviour
         if (www.text == "0")
         {
             Debug.Log("user created successfully");
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0);
         }
         else
         {

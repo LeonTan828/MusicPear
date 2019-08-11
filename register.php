@@ -4,7 +4,7 @@
     //check to seee if the connection was successful
     if (mysqli_connect_errno())
     {
-        echo "connection failed";
+        echo("connection failed");
         exit()
     }
 
@@ -19,12 +19,12 @@
 
     if (mysqli_num_rows($usernamecheckquery) > 0)
     {
-        echo "username already exists";
+        echo("username already exists");
         exit();
     }
 
     //add user to the table
-    $insertuserquery = "INSERT INTO user (username, password, userID) VALUES ('" . $username ."', '" . $password . "', '" . $name . "');";
+    $insertuserquery = "INSERT INTO user (name, password, userID) VALUES ('" . $name ."', '" . $password . "', '" . $username . "');";
     mysqli_query($con, $insertuserquery) or die("Insert user failed");
 
     echo("0");
