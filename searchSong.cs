@@ -47,7 +47,7 @@ public class SearchSong : MonoBehaviour {
         }
         else
         {
-            Debug.Log("Error: Couldn't search " + www.text);
+            Debug.Log("Error: Couldn't search: " + www.text);
         }
     }
 
