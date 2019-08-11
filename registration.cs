@@ -24,10 +24,10 @@ public class registration : MonoBehaviour
         form.AddField("password", passwordField.text);
         WWW www = new WWW("http://localhost/sqlconnect/register.php", form);
         yield return www;
-        if (www.text == '0')
+        if (www.text == "0")
         {
-            Debug.log("user created successfully");
-            UnityEngine.SceneManagement.Scenemanager.Loadscene(0);
+            Debug.Log("user created successfully");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
         else
         {
