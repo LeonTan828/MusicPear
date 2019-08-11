@@ -5,7 +5,7 @@
     if (mysqli_connect_errno())
     {
         echo "connection failed";
-        exit()
+        exit();
     }
 
     $username = $_POST["username"];
