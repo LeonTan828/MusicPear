@@ -5,7 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unityengine.UI;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SearchSong : MonoBehaviour {
@@ -62,7 +62,7 @@ public class SearchSong : MonoBehaviour {
         
         if (www.text[0] == '0')
         {
-            Debug.Log("Successfully found songs" + www.text[1]);
+            Debug.Log("Successfully found songs");
             //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else

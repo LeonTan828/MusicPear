@@ -10,7 +10,7 @@
 
     $searchterm = $_POST["searchterm"];
 
-    $titlesearchquery = "SELECT songID FROM Song WHERE title = '" . $searchterm . "';";
+    $titlesearchquery = "SELECT songID FROM songs WHERE title = '" . $searchterm . "';";
     $titlesearch = mysqli_query($con, $titlesearchquery) or die("title search failed");
 
     if (mysqli_num_rows($titlesearch) == 0)
@@ -23,7 +23,7 @@
 
     while($row = mysqli_fetch_assoc($titlesearch))
     {
-        echo($row);
+        echo($row['songID']);
     }
     // NOTE figure out how to return the search results
 ?>

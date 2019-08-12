@@ -10,7 +10,7 @@
 
     $searchterm = $_POST["searchterm"];
 
-    $albumsearchquery = "SELECT songID FROM Song WHERE album = '" . $searchterm . "';";
+    $albumsearchquery = "SELECT songID FROM songs WHERE album = '" . $searchterm . "';";
     $albumsearch = mysqli_query($con, $albumsearchquery) or die("album search failed");
 
     if (mysqli_num_rows($albumsearch) == 0)
