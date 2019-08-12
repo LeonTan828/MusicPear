@@ -23,7 +23,7 @@
 
     while($row = mysqli_fetch_assoc($titlesearch))
     {
-        echo($row['songID']);
+        echo($row['songID'] );
     }
     // NOTE figure out how to return the search results
 ?>

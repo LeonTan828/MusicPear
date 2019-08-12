@@ -2,6 +2,7 @@
 //search by title
 //search by album
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,7 +43,10 @@ public class SearchSong : MonoBehaviour {
         
         if (www.text[0] == '0')
         {
-            Debug.Log("Successfully found songs");
+            string temp = www.text;
+            string[] words = temp.Split(' ');
+
+            Debug.Log("Successfully found songs" + words[1]);
             //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
@@ -63,7 +67,7 @@ public class SearchSong : MonoBehaviour {
         if (www.text[0] == '0')
         {
             string temp = www.text;
-            string[] words = phrase.Split(' ');
+            string[] words = temp.Split(' ');
 
             Debug.Log("Successfully found songs" + words[1]);
             //SceneManager.LoadScene(); // NOTE: need to check what scene
@@ -85,7 +89,10 @@ public class SearchSong : MonoBehaviour {
         
         if (www.text[0] == '0')
         {
-            Debug.Log("Successfully found songs");
+            string temp = www.text;
+            string[] words = temp.Split(' ');
+
+            Debug.Log("Successfully found songs" + words[1]);
             //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
