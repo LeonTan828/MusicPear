@@ -109,7 +109,7 @@ public class SearchSong : MonoBehaviour {
 
     public void makeSongObject(string result)
     {
-        Song newSong = new Song(result);
+        Song newSong = gameObject.AddComponent<Song>(result);
         Debug.Log("see if true" + newSong.name);
     }
 }
