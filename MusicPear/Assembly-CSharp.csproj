@@ -57,11 +57,15 @@
      <Compile Include="Assets\Scripts\ChangingColor.cs" />
      <Compile Include="Assets\Scripts\Database\SongListButtonDatabase.cs" />
      <Compile Include="Assets\Scripts\Database\SongListControlDatabase.cs" />
+     <Compile Include="Assets\Scripts\DBManager.cs" />
      <Compile Include="Assets\Scripts\Library\ButtonListButton.cs" />
      <Compile Include="Assets\Scripts\Library\ButtonListControl.cs" />
      <Compile Include="Assets\Scripts\Library\Global.cs" />
      <Compile Include="Assets\Scripts\Library\Playlist.cs" />
+     <Compile Include="Assets\Scripts\login.cs" />
+     <Compile Include="Assets\Scripts\registration.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
+     <Compile Include="Assets\Scripts\searchSong.cs" />
      <Compile Include="Assets\Scripts\Song.cs" />
      <Compile Include="Assets\Scripts\User.cs" />
      <Compile Include="Assets\Scripts\UserAvatar.cs" />

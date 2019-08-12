@@ -1,4 +1,4 @@
-// search by artist
+﻿// search by artist
 //search by title
 //search by album
 
