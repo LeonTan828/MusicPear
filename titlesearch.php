@@ -19,7 +19,7 @@
         exit();
     }
 
-    echo("0");
+    echo("0 ");
 
     while($row = mysqli_fetch_assoc($titlesearch))
     {
