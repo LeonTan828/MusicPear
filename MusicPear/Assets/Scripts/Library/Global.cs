@@ -32,6 +32,10 @@ public class Global : MonoBehaviour
 
     }
 
+    public List<Playlist> getPlaylists()
+    {
+        return allPlaylists;
+    }
 
     public string[] getPlaylistList()
     {

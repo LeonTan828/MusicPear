@@ -58,6 +58,9 @@
      <Compile Include="Assets\Scripts\Database\SongListButtonDatabase.cs" />
      <Compile Include="Assets\Scripts\Database\SongListControlDatabase.cs" />
      <Compile Include="Assets\Scripts\DBManager.cs" />
+     <Compile Include="Assets\Scripts\Library\AllSongFunctions\LibraryListController.cs" />
+     <Compile Include="Assets\Scripts\Library\AllSongFunctions\LibraryPlaylistListButton.cs" />
+     <Compile Include="Assets\Scripts\Library\AllSongFunctions\LibrarySongListButton.cs" />
      <Compile Include="Assets\Scripts\Library\ButtonListButton.cs" />
      <Compile Include="Assets\Scripts\Library\ButtonListControl.cs" />
      <Compile Include="Assets\Scripts\Library\Global.cs" />

@@ -17,6 +17,11 @@ public class SearchSong : MonoBehaviour {
     public Button titleButton;
     public Button albumButton;
 
+    public Song testSong; 
+    void Awake() {
+        testSong = gameObject.AddComponent<Song>();
+    }
+
     public void Callartistsearch()
     {
         StartCoroutine(ArtistSearch());
@@ -48,7 +53,7 @@ public class SearchSong : MonoBehaviour {
 
             Debug.Log("Successfully found songs" + words[1]);
 
-            makeSongObject(words[1]);
+            testSong = makeSongObject(words[1]);
             //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
@@ -72,11 +77,9 @@ public class SearchSong : MonoBehaviour {
             string[] words = temp.Split(' ');
 
             Debug.Log("Successfully found songs" + words[1]);
-
-            Song testSong = gameObject.AddComponent<Song>();
             
             testSong = makeSongObject(words[1]);
-            testSong.getName();
+            //testSong.getName();
 
 
             //SceneManager.LoadScene(); // NOTE: need to check what scene
@@ -103,7 +106,7 @@ public class SearchSong : MonoBehaviour {
 
             Debug.Log("Successfully found songs" + words[1]);
 
-            makeSongObject(words[1]);
+            testSong = makeSongObject(words[1]);
             //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else

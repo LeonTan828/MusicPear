@@ -14,14 +14,19 @@ public class Song : MonoBehaviour
         songID = null;
     }
 
+    public Song(string inputName)
+    {
+        name = inputName;
+    }
+
     public void setSongID(string currID)
     {
         songID = currID;
     }
 
-    public void getName()
+    public string getSongName()
     {
-        Debug.Log(songID + "hohoho");
+        return name;
     }
     public void findData()
     {
