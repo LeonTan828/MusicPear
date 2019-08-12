@@ -36,11 +36,13 @@ public class Song : MonoBehaviour
             string temp = www.text;
             string[] words = temp.Split(' ');
 
+            string[] songStuff = words[1].Split('$');
+
             Debug.Log("Successfully found songs");
 
-            name = words[1];
-            artist = words[2];
-            album = words[3];
+            name = songStuff[0];
+            artist = songStuff[1];
+            album = songStuff[2];
         }
         else
         {
