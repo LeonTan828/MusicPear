@@ -23,7 +23,9 @@
 
     while($row = mysqli_fetch_assoc($titlesearch))
     {
-        echo($row['title'] . '\$' . $row['artist'] . '\$' . $row['album']);
+        echo($row['title']);
+        
+        //echo($row['title'] . '\$' . $row['artist'] . '\$' . $row['album']);
     }
     // NOTE figure out how to return the search results
 ?>
