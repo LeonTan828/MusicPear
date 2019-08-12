@@ -18,9 +18,15 @@ public class Song : MonoBehaviour
     {
         songID = currID;
     }
+
+    public void getName()
+    {
+        Debug.Log(songID + "hohoho");
+    }
     public void findData()
     {
         StartCoroutine(getData());
+        
     }
 
     IEnumerator getData()
@@ -33,14 +39,24 @@ public class Song : MonoBehaviour
         
         if (www.text[0] == '0')
         {
+            Debug.Log(www.text);
+
             string temp = www.text;
-            string[] words = temp.Split(' ');
+            string[] words = temp.Split('@');
+
+            string[] songData = words[1].Split('$');
 
             Debug.Log("Successfully found songs");
 
-            name = words[1];
-            artist = words[2];
-            album = words[3];
+            Debug.Log(songData[0]);
+            Debug.Log(songData[1]);
+            Debug.Log(songData[2]);
+
+            name = songData[0];
+            artist = songData[1];
+            album = songData[2];
+
+            Debug.Log(name);
         }
         else
         {

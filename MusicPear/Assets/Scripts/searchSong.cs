@@ -73,7 +73,12 @@ public class SearchSong : MonoBehaviour {
 
             Debug.Log("Successfully found songs" + words[1]);
 
-            makeSongObject(words[1]);
+            Song testSong = gameObject.AddComponent<Song>();
+            
+            testSong = makeSongObject(words[1]);
+            testSong.getName();
+
+
             //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
@@ -107,12 +112,13 @@ public class SearchSong : MonoBehaviour {
         }
     }
 
-    public void makeSongObject(string result)
+    public Song makeSongObject(string result)
     {
         
         Song newSong = gameObject.AddComponent<Song>();
         newSong.setSongID(result);
         newSong.findData();
-        Debug.Log("see if true" + newSong.name);
+
+        return newSong;
     }
 }
