@@ -65,7 +65,7 @@
      <Compile Include="Assets\Scripts\login.cs" />
      <Compile Include="Assets\Scripts\registration.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
-     <Compile Include="Assets\Scripts\searchSong.cs" />
+     <Compile Include="Assets\Scripts\SearchSong.cs" />
      <Compile Include="Assets\Scripts\Song.cs" />
      <Compile Include="Assets\Scripts\User.cs" />
      <Compile Include="Assets\Scripts\UserAvatar.cs" />
