@@ -9,13 +9,15 @@ public class Song : MonoBehaviour
     private string album;
     private string songID;
 
-    public Song (string currID)
+    public Song ()
     {
-        songID = currID;
-
-        findData();
+        songID = null;
     }
 
+    public void setSongID(string currID)
+    {
+        songID = currID;
+    }
     public void findData()
     {
         StartCoroutine(getData());
