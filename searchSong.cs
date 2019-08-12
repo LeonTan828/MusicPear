@@ -47,6 +47,8 @@ public class SearchSong : MonoBehaviour {
             string[] words = temp.Split(' ');
 
             Debug.Log("Successfully found songs" + words[1]);
+
+            makeSongObject(words[1]);
             //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
@@ -70,6 +72,8 @@ public class SearchSong : MonoBehaviour {
             string[] words = temp.Split(' ');
 
             Debug.Log("Successfully found songs" + words[1]);
+
+            makeSongObject(words[1]);
             //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
@@ -93,11 +97,19 @@ public class SearchSong : MonoBehaviour {
             string[] words = temp.Split(' ');
 
             Debug.Log("Successfully found songs" + words[1]);
+
+            makeSongObject(words[1]);
             //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
         {
             Debug.Log("Error: Couldn't search " + www.text);
         }
+    }
+
+    public void makeSongObject(string result)
+    {
+        Song newSong = new Song(result);
+        Debug.Log("see if true" + newSong.name);
     }
 }
