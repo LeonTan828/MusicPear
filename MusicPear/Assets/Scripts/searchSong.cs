@@ -17,9 +17,18 @@ public class SearchSong : MonoBehaviour {
     public Button titleButton;
     public Button albumButton;
 
+    [SerializeField]
+    public SongListControlDatabase songController;
+
     public Song testSong; 
     void Awake() {
         testSong = gameObject.AddComponent<Song>();
+    }
+
+    void Start()
+    {
+        string[] testing = new string[]{"helloworld"};
+        songController.updateSearchResults(testing);
     }
 
     public void Callartistsearch()

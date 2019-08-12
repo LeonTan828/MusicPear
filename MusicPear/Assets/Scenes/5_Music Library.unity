@@ -502,7 +502,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 189359338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35681981939602c46b55a46ff1f9d206, type: 3}
+  m_Script: {fileID: 11500000, guid: 82e704dbe937046bdb15cde4a08076be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playlistText: {fileID: 890485876}
@@ -1212,10 +1212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c610d9d61ffd847bf2a790ce712682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songButtonTemplate: {fileID: 1099735288}
-  panel: {fileID: 1494441059}
-  hidePlaylistPanel: {fileID: 826865388}
-  SongName: {fileID: 1631071697}
 --- !u!114 &500990990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2053,7 +2049,7 @@ MonoBehaviour:
   playlistButtonTemplate: {fileID: 189359338}
   globalControl: {fileID: 1133676858}
   songSelectedPanel: {fileID: 1666674235}
-  songSelectedPanelText: {fileID: 635273408}
+  songSelectedPanelText: {fileID: 240023654}
   allSongScrollList: {fileID: 1264840506}
   allPlaylistScrollList: {fileID: 1973039753}
   hidePlaylistPanel: {fileID: 826865388}
@@ -2951,8 +2947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029f2d16ed94ac642876a6a85d4b49b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songText: {fileID: 1628525155}
-  songListControl: {fileID: 500990989}
 --- !u!114 &1099735291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4700,8 +4694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029f2d16ed94ac642876a6a85d4b49b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songText: {fileID: 0}
-  songListControl: {fileID: 0}
 --- !u!114 &1628525155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4873,8 +4865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029f2d16ed94ac642876a6a85d4b49b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songText: {fileID: 0}
-  songListControl: {fileID: 0}
 --- !u!114 &1633416540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5294,7 +5284,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1699817859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b4d4ace1b9e61439b55c13c0b6c9fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 467f5cd2063c347459011f5ebd63aa1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   songText: {fileID: 1633416540}
