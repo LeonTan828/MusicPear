@@ -13,6 +13,16 @@ public class Song : MonoBehaviour
     {
         songID = currID;
 
+        findData();
+    }
+
+    public void findData()
+    {
+        StartCoroutine(getData());
+    }
+
+    IEnumerator getData()
+    {
         WWWForm form = new WWWForm();
         form.AddField("searchID", songID);
         // NOTE: Remember to change the PHP
