@@ -43,7 +43,7 @@ public class SearchSong : MonoBehaviour {
         if (www.text[0] == '0')
         {
             Debug.Log("Successfully found songs");
-            SceneManager.LoadScene(); // NOTE: need to check what scene
+            //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
         {
@@ -62,8 +62,8 @@ public class SearchSong : MonoBehaviour {
         
         if (www.text[0] == '0')
         {
-            Debug.Log("Successfully found songs");
-            SceneManager.LoadScene(); // NOTE: need to check what scene
+            Debug.Log("Successfully found songs" + www.text[1]);
+            //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
         {
@@ -83,7 +83,7 @@ public class SearchSong : MonoBehaviour {
         if (www.text[0] == '0')
         {
             Debug.Log("Successfully found songs");
-            SceneManager.LoadScene(); // NOTE: need to check what scene
+            //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
         {
