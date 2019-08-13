@@ -16,6 +16,7 @@ public class SearchSong : MonoBehaviour {
     public Button artistButton;
     public Button titleButton;
     public Button albumButton;
+    public Button refresh;
 
     [SerializeField]
     public SongListControlDatabase songController;
@@ -90,7 +91,6 @@ public class SearchSong : MonoBehaviour {
             testSong = makeSongObject(words[1]);
             //testSong.getName();
 
-
             //SceneManager.LoadScene(); // NOTE: need to check what scene
         }
         else
@@ -130,6 +130,8 @@ public class SearchSong : MonoBehaviour {
         Song newSong = gameObject.AddComponent<Song>();
         newSong.setSongID(result);
         newSong.findData();
+
+        Debug.Log(newSong.getSongName() + " song object made");
 
         return newSong;
     }
