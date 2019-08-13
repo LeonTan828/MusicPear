@@ -11,6 +11,7 @@
     $searchterm = $_POST["searchID"];
 
     $resultsearchquery = "SELECT title, artist, album FROM songs WHERE songID = '" . $searchterm . "';";
+    //$resultsearchquery = "SELECT songID FROM songs WHERE songID = '" . $searchterm . "';";
     $resultsearch = mysqli_query($con, $resultsearchquery) or die("result search failed");
 
     if (mysqli_num_rows($resultsearch) == 0)
@@ -19,13 +20,14 @@
         exit();
     }
 
-    echo("0 ");
+    echo("0@");
 
-    while($row = mysqli_fetch_assoc($titlesearch))
+
+    while($row = mysqli_fetch_assoc($resultsearch))
     {
-        echo($row['title']);
+        //echo($row['title']);
         
-        //echo($row['title'] . '\$' . $row['artist'] . '\$' . $row['album']);
+        echo($row['title'] . '$' . $row['artist'] . '$' . $row['album']);
     }
     // NOTE figure out how to return the search results
 ?>

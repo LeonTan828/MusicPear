@@ -21,7 +21,8 @@ public class SearchSong : MonoBehaviour {
     [SerializeField]
     public SongListControlDatabase songController;
 
-    public Song testSong; 
+    public Song testSong;
+    public Song[] resultList;  
     void Awake() {
         testSong = gameObject.AddComponent<Song>();
     }
@@ -45,6 +46,13 @@ public class SearchSong : MonoBehaviour {
     public void Callalbumsearch()
     {
         StartCoroutine(AlbumSearch());
+    }
+
+    public void Callrefresh()
+    {
+        resultList = new Song[] {testSong};
+        // NOTE
+        songController.updateSearchResults(resultList);
     }
 
     IEnumerator ArtistSearch() 
