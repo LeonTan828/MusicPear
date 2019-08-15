@@ -145,10 +145,14 @@ MonoBehaviour:
   artistButton: {fileID: 2036112185}
   titleButton: {fileID: 1176338094}
   albumButton: {fileID: 306953662}
-  refresh: {fileID: 0}
-  songController: {fileID: 500990989}
-  testSong: {fileID: 0}
-  resultList: []
+  refresh: {fileID: 715668921}
+  tempString: 
+  tempID: 
+  songButtonTemplate: {fileID: 1099735288}
+  panel: {fileID: 826865388}
+  SongName: {fileID: 1045149152}
+  currentPlaylistView: 
+  songSearchResults: []
 --- !u!4 &120209570
 Transform:
   m_ObjectHideFlags: 0
@@ -156,12 +160,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120209568}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1533.8981, y: 397.4046, z: 32.670444}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 573.8981, y: -142.5954, z: 32.670444}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Children:
+  - {fileID: 500990988}
+  m_Father: {fileID: 1181270274}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &261146116
 GameObject:
@@ -492,7 +497,6 @@ GameObject:
   - component: {fileID: 500990992}
   - component: {fileID: 500990991}
   - component: {fileID: 500990990}
-  - component: {fileID: 500990989}
   m_Layer: 5
   m_Name: Songs Button Scroll List
   m_TagString: Untagged
@@ -508,37 +512,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500990987}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -32.670444}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 942592176}
   - {fileID: 1493073332}
-  m_Father: {fileID: 1181270274}
+  m_Father: {fileID: 120209570}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -209, y: -151}
+  m_AnchoredPosition: {x: -832.8981, y: -8.404602}
   m_SizeDelta: {x: 1100, y: 576}
   m_Pivot: {x: 0, y: 0.5}
---- !u!114 &500990989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500990987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa5d9f35414a4a24494a39d481328152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonTemplate: {fileID: 1099735288}
-  panel: {fileID: 826865388}
-  SongName: {fileID: 1045149152}
-  globalControl: {fileID: 0}
-  currentPlaylistView: 
-  songSearchResults: []
 --- !u!114 &500990990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,7 +1035,7 @@ RectTransform:
   - {fileID: 1045149151}
   - {fileID: 1901876764}
   m_Father: {fileID: 1181270274}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1827,18 +1813,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1099735292}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1099735294}
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1099735292
@@ -1891,7 +1866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songText: {fileID: 1628525155}
-  songListControl: {fileID: 500990989}
+  songListControl: {fileID: 120209569}
 --- !u!1 &1133676857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,8 +2132,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 500990988}
   - {fileID: 826865389}
+  - {fileID: 120209570}
   m_Father: {fileID: 1369401742}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2287,9 +2262,13 @@ MonoBehaviour:
   titleButton: {fileID: 1176338094}
   albumButton: {fileID: 0}
   refresh: {fileID: 715668921}
-  songController: {fileID: 0}
-  testSong: {fileID: 0}
-  resultList: []
+  tempString: 
+  tempID: 
+  songButtonTemplate: {fileID: 0}
+  panel: {fileID: 0}
+  SongName: {fileID: 0}
+  currentPlaylistView: 
+  songSearchResults: []
 --- !u!1 &1411568192
 GameObject:
   m_ObjectHideFlags: 0

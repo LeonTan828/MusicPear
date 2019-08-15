@@ -8,7 +8,7 @@ public class SongListButtonDatabase : MonoBehaviour
     [SerializeField]
     private Text songText;
     [SerializeField]
-    private SongListControlDatabase songListControl;
+    private SearchSong songListControl;
 
     private string myTextString;
 

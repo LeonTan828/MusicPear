@@ -20,21 +20,87 @@ public class SearchSong : MonoBehaviour {
     public string tempString;
     public string tempID;
 
-    [SerializeField]
-    private SongListControlDatabase songController;
-
     public Song testSong;
     public Song[] resultList;
-    void Awake() {
-    }
+
+    // FROM SONGLISTCONTROLDATABASE
+    //[SerializeField]
+    public GameObject songButtonTemplate;
+
+    public GameObject panel;
+    public Text SongName;
+    public string currentPlaylistView;
+
+    private string[] songSearchResults;
+
+    private Song[] songObjects;
+
+    private List<GameObject> buttons;
+    int currCount;
 
     void Start()
     {
         // string[] testing = new string[]{"helloworld"};
         // songController.updateSearchResults(testing);
         //songController = new SongListControlDatabase();
+
+        currCount = songSearchResults.Length;
+        songObjects = new Song[0]; // creates a default Song object array
+        // Song objects should be overwritten in update search results 
+        buttons = new List<GameObject>(); // Create a new list of buttons
+
+        updateSearchResults(songObjects);
     }
 
+    public void updateSearchResults(Song[] searchResults)
+    {
+        songObjects = searchResults;
+        Debug.Log("i am in update search results");
+        //Debug.Log(searchResults[0].getSongName());
+        songSearchResults = new string[searchResults.Length];
+
+        for (int k = 0; k < songSearchResults.Length; k++){
+            songSearchResults[k] = searchResults[k].getSongName();
+        }
+
+        if (buttons.Count > 0)
+        {
+            foreach (GameObject button in buttons)
+            {
+                Destroy(button.gameObject);
+            }
+
+            buttons.Clear();
+        }
+
+
+        // Update for loop once i get playlists to work
+        foreach (string i in songSearchResults)
+        {
+            GameObject button = Instantiate(songButtonTemplate) as GameObject;
+            button.SetActive(true);
+
+            buttons.Add(button); // add the button to the button list
+
+            button.GetComponent<SongListButtonDatabase>().SetText(i);
+
+
+            button.transform.SetParent(songButtonTemplate.transform.parent, false);
+            // this will set the parent of the button to the parent of what it is spawning from (in this case, the button list content object)
+        }
+    }
+
+    public void buttonClicked(string myTextString)
+    {
+        SongName.text = myTextString;
+        panel.SetActive(true);
+        currentPlaylistView = myTextString;
+    }
+
+    public void ChangePanelState(bool state)
+    {
+        panel.SetActive(state); // Reveals playlist panel
+    }
     public void Callartistsearch()
     {
         StartCoroutine(ArtistSearch());
@@ -70,7 +136,7 @@ public class SearchSong : MonoBehaviour {
 
         Debug.Log(resultList[0].getSongName() + " in da list");
         // // NOTE
-        songController.updateSearchResults(resultList);
+        updateSearchResults(resultList);
     }
 
     IEnumerator ArtistSearch() 
