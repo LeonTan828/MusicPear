@@ -10,11 +10,12 @@ public class SongListControlDatabase : MonoBehaviour
 
     public GameObject panel;
     public Text SongName;
-    public Global globalControl;
     public string currentPlaylistView;
 
     [SerializeField]
     private string[] songSearchResults;
+
+    private Song[] songObjects;
 
     private List<GameObject> buttons;
     int currCount;
@@ -22,16 +23,24 @@ public class SongListControlDatabase : MonoBehaviour
     private void Start()
     {
         currCount = songSearchResults.Length;
-       
-
+        songObjects = new Song[0]; // creates a default Song object array
+        // Song objects should be overwritten in update search results 
         buttons = new List<GameObject>(); // Create a new list of buttons
+
+        updateSearchResults(songObjects);
 
     }
 
-    public void updateSearchResults(string[] searchResults)
+    public void updateSearchResults(Song[] searchResults)
     {
+        songObjects = searchResults;
+        Debug.Log("i am in update search results");
+        //Debug.Log(searchResults[0].getSongName());
         songSearchResults = new string[searchResults.Length];
-        songSearchResults = searchResults;
+
+        for (int k = 0; k < songSearchResults.Length; k++){
+            songSearchResults[k] = searchResults[k].getSongName();
+        }
 
         if (buttons.Count > 0)
         {
